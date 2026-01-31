@@ -1,0 +1,142 @@
+/* ==========================
+   GLOBAL THEME SETTINGS
+========================== */
+:root {
+    --orange: #ff7b00;
+    --orange-dark: #cc6100;
+    --text-light: #ffffff;
+    --overlay-dark: rgba(0, 0, 0, 0.6);
+    --input-bg: rgba(255, 255, 255, 0.08);
+    --input-border: rgba(255, 255, 255, 0.2);
+}
+
+/* ==========================
+   BODY BACKGROUND
+========================== */
+body {
+    background: url('assets/bg.png') center/cover no-repeat fixed;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: var(--overlay-dark);
+    z-index: -1;
+}
+
+/* ==========================
+   MAIN CONTAINER
+========================== */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ==========================
+   FORM CONTAINER
+========================== */
+.form-container {
+    width: 100%;
+    max-width: 480px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 18px;
+    padding: 35px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+    border-top: 6px solid var(--orange);
+    color: var(--text-light);
+}
+
+/* ==========================
+   HEADINGS
+========================== */
+.form-container h2 {
+    color: var(--orange);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ==========================
+   LABELS
+========================== */
+.form-label {
+    font-weight: 600;
+    color: var(--orange);
+    font-size: 14px;
+}
+
+
+/* ==========================
+   BUTTON
+========================== */
+.btn-create-account {
+    width: 100%;
+    background: var(--orange)  ;
+    color: #fff  ;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 10px;
+    border: none  ;
+    box-shadow: 0 4px 12px rgba(255, 136, 0, 0.4);
+    transition: 0.3s;
+}
+
+.btn-create-account:hover {
+    background: var(--orange-dark)  ;
+    box-shadow: 0 6px 20px rgba(255, 136, 0, 0.6);
+    transform: translateY(-2px);
+}
+
+/* ==========================
+   ALERT MESSAGES
+========================== */
+.alert {
+    border-radius: 10px;
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+.alert-success {
+    background-color: rgba(76, 175, 80, 0.8);
+}
+
+.alert-danger {
+    background-color: rgba(255, 77, 77, 0.8);
+}
+
+/* ==========================
+   LINKS
+========================== */
+a {
+    color: var(--orange);
+    font-weight: 600;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* ==========================
+   FILE INPUT
+========================== */
+input[type="file"] {
+    color: var(--text-light);
+}
+
+/* ==========================
+   MOBILE RESPONSIVE
+========================== */
+@media(max-width: 576px) {
+    .form-container {
+        padding: 25px;
+    }
+}
